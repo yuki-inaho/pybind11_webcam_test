@@ -61,10 +61,10 @@ class CMakeBuild(build_ext):
 
 
 setup(
-    name="pywebcam",
+    name="pybind_webcam_test",
     version="0.0.1",
     description="A test project using pybind11 to activate webcam",
     cmdclass={"build_ext": CMakeBuild},
-    ext_modules=[CMakeExtension("pywebcam")],
+    ext_modules=[CMakeExtension("pybind_webcam_test")],
     zip_safe=False,
 )

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-set(PROJ_NAME pywebcam)
+set(PROJ_NAME pybind_webcam_test)
 project(${PROJ_NAME})
 
 set(CMAKE_BUILD_TYPE Release)
