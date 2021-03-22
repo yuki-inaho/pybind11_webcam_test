@@ -1,8 +1,9 @@
 #include "webcam.h"
 
-WebcamCpp::WebcamCpp(int32_t video_index)
+WebcamCpp::WebcamCpp(CameraInformation camera_info)
 {
-    cam_ = cv::VideoCapture(video_index);
+    camera_info_ = camera_info;
+    cam_ = cv::VideoCapture(camera_info.device_id);
     if (!cam_.isOpened())
     {
         std::cerr << "!cam_.isOpened()" << std::endl;
@@ -12,7 +13,8 @@ WebcamCpp::WebcamCpp(int32_t video_index)
     is_ready = false;
 }
 
-WebcamCpp::~WebcamCpp(){
+WebcamCpp::~WebcamCpp()
+{
     cam_.release();
 }
 

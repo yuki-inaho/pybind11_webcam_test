@@ -1,3 +1,4 @@
 build/
 dist/
+pybind_webcam_test.egg-info/
 .vscode/settings.json
